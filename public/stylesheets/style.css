@@ -1,0 +1,135 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+a {
+  color: #FEFEFE;
+}
+
+#container1{
+  padding: 0;
+}
+
+#container2{
+  padding: 0;
+}
+
+#container3{
+  background-color: lightgrey;
+}
+
+#navSearchBar{
+  padding-top: 4.5%;
+}
+
+
+#phone_help{
+    padding-top: 1%;
+}
+
+#login_cart{
+  padding-top: 4%;
+}
+
+#cartCard{
+  padding-top: 2%;
+  background-color: lightgrey;
+}
+
+#signUpDiv{
+  padding-top: 2.5%;
+}
+
+
+#footerCol1 {
+text-align: center;
+
+}
+
+#footerCol2 {
+text-align: center;
+
+}
+
+#footerCol3 {
+text-align: center;
+
+}
+
+#mainCard {
+
+  background-color: #1a75ff;
+  border-radius: 10px;
+
+}
+#phoneHolder{
+  color:blue;
+}
+#phoneNumber{
+  font-size: 80%;
+  color:black;
+}
+#viewBody{
+
+   height: 100%;
+
+}
+
+
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+.thumb {
+    margin-bottom: 30px;
+}
+
+.space {
+  margin: 5% auto;
+}
+
+#footer {
+  color:red;
+}
+
+
+
+

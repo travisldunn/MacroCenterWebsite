@@ -1,0 +1,15 @@
+<h1>{{page.header}}</h1><hr>
+<div>
+  <table>
+		{{#each page.user}}
+    <tr>
+      <td>
+        {{name}}
+        {{email}}
+        {{password}}
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
+{{{script}}}

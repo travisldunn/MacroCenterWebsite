@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="card col-md-5 col-md-offset-4" id="accountCard">
+    <h3 class="card-header">Account Settings</h3>
+    <div class="card-block">
+      <form>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            Name<input type="text" class="form-control" id="changeUserName" placeholder="{{page.userName}}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            Username<input type="text" class="form-control" id="changeUserUsername" placeholder="{{page.userUsername}}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            Password<input type="password" class="form-control" id="changeUserPassword" placeholder="Change Password">
+            Confirm Password<input type="password" class="form-control" id="confirmChangeUserPassword" placeholder="Confirm New Password">
+          </div>
+        </div>
+        <div class="form-group row">
+
+          <div class="col-sm-10">
+            Address<input type="text" class="form-control" id="newAddress" placeholder="{{page.address}}">
+            Type<input type="text" class="form-control" id="newAddressType" placeholder="{{page.type}}">
+            <a href="#" class="btn btn-primary" id="saveAddress">Edit Address</a>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary" id="saveAccountEdit">Save Edits</a>
+        <a href="#" class="btn btn-primary" id="deleteAccount">Delete Account</a>
+      </form>
+    </div>
+  </div>
+    <p id="editResults"></p>
+</div>

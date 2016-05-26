@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<style>
+	#Home:link
+	{
+		color: #00B7FF;
+	  text-decoration: none;
+	}
+	#Home:visited
+	{
+		color: #00B7FF;
+    text-decoration: none;
+	}
+	#Home:hover
+	{
+		color: #00B7FF;
+	  text-decoration: none;
+	}
+	#Home:active
+	{
+		color: #00B7FF;
+    text-decoration: none;
+	}
+	.ui-autocomplete {
+	 max-height: 100px;
+	 overflow-y: auto;
+	 /* prevent horizontal scrollbar */
+	 overflow-x: hidden;
+ }
+ /* IE 6 doesn't support max-height
+	* we use height instead, but this forces the menu to always be this tall
+	*/
+ * html .ui-autocomplete {
+	 height: 100px;
+ }
+</style>
+<head>
+	<script src="https://cdn.jsdelivr.net/tether/1.2.0/tether.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/custom-homepage.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="/stylesheets/style.css">
+
+	<link rel="icon" href="/stylesheets/favicon.ico" type="image/ico" sizes="16x16" />
+	<title>{{{page.title}}}</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-dark bg-secondary" id="container1">
+
+			<!-- ******************** Nav1 ******************** -->
+
+			<div class="container-fluid" id="container2">
+				<div class="col-md-12">
+					<div class="col-md-2">
+						<a href="/" id="Home">
+							<h1>Macro Center</h1></a>
+					</div>
+					<div class="col-md-6" id="navSearchBar">
+						<form class="form-inline pull-md-right">
+							<div class="ui-widget">
+							<input class="form-control" size="40" id="searchField">
+								<button class="btn btn-success-outline" type="submit" id="searchButton">Search</button>
+							</div>
+
+						</form>
+					</div>
+
+					<div class="col-md-4">
+						<div class="col-sm-6 col-md-12" id="phone_help">
+							<div class="col-md-6" id ="phoneHolder">
+								<div class="col-md-2">
+									<i class="zmdi zmdi-phone zmdi-hc-2x"></i>
+								</div>
+								<div class="col-md-10" >
+									Contact
+									<p>
+										<a href="tel:+1-800-555-5555" id="phoneNumber">Call 1-800-555-5555</a>
+									</p>
+								</div>
+							</div>
+							<a href="/help" class="btn btn-secondary btn-sm" id="helpButton"><i class="zmdi zmdi-help zmdi-hc-2x"></i>Help</a>
+						</div>
+						<div class="col-sm-6 col-md-12" id="login_cart">
+
+								<div class="col-md-6" id="accountbutton">
+									<div class ="row">
+
+										<a class="dropdown-item" href="/user/signin">Login</a>
+										<a class="dropdown-item" href="/user/account">Account Settings</a>
+										<a class="dropdown-item" href="/login/logout">Logout</a>
+									</div>
+								</div>
+
+								<!-- |
+								<button type="button" class="btn btn-secondary" id="loginUserBtn">Login</button>
+								<button type="button" class="btn btn-secondary" id="accsetUserBtn">Acc Set</button>
+								|
+								<button type="button" class="btn btn-secondary" id="logoutUserBtn">Logout</button>  -->
+
+							<div class="col-md-6">
+							<a href="/user/createuser" class="btn btn-secondary btn-sm" id="signUpUser">Sign Up</a>
+								<a href="/cart"><button type="button" class="btn btn-secondary" id="cartCard"><i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>My Cart</button></a>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- ******************** Nav2 ******************** -->
+
+				<div class="col-md-12 bg-primary">
+
+					{{#if page.welcomeHeader }}
+						<h1 id="welcomeHeader">	{{page.welcomeHeader}}	</h1>
+					{{else}}
+						<h1 id="welcomeHeader">Welcome</h1>
+					{{/if}}
+
+				</div>
+
+				<!-- ******************** Nav3 ******************** -->
+
+				<div class="col-md-12 bg-secondary" id="container3">
+					<a class="navbar-brand">Categories</a>
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+						<!-- <li class="nav-item active"> -->
+							<a class="nav-link" href="/products/category/Power%20Supply" id="powerSupply" value="Power Supply">Power Supply</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/Computer%20Case" id="cases">Cases</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/CPU" id="cpu">CPU's</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/Mother%20Board" id="motherBoards">Mother Boards</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/GPU" id="gpu">GPU's</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/Data%20Storage" id="dataStorage">Data Storage</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/RAM" id="ram">RAM</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/products/category/FANS" id="fans">Fans</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</header>
+	<div id="viewBody" class="container">
+		{{{body}}}
+	</div>
+
+<!-- ******************** Footer ******************** -->
+
+<nav class="navbar-default navbar-dark bg-primary" id ="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 text-center" id ="footerCol1">
+                    <h5 id='footer-header'>- Services -</h5><hr>
+                    <!-- <div class="col-sm-4 " style="padding: 0 0 0 0px"> -->
+                    <a href="">Deals</a><br>
+                    <a href="">Track an Order</a><br>
+                    <a href="">Returns and Refunds</a><br>
+                    <a href="">Privacy and Security</a><br>
+                    <a href="">Feedback</a>
+                    <!-- </div> -->
+                </div>
+
+                <div class="col-sm-4 text-center"id ="footerCol2">
+                    <h5 id='footer-header'>- My Account -</h5><hr>
+                  	<a href="/user/signin">Login</a><br>
+                    <a href="">My Dashboard</a><br>
+                    <a href="">Address Book</a><br>
+                    <a href="">Wish List</a>
+                </div>
+
+                <div class="col-sm-4 text-center" id ="footerCol3">
+                    <h5 id='footer-header'>- About -</h5><hr>
+                  	<a href="/about">About Micro Center</a><br>
+                    <a href="">Awards/Ranking</a><br>
+                    <a href="/about/contact">Contact Us</a><br>
+                    <a href="">Careers</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	<script src="../../js/applicationJsMain.js"></script>
+	<script src='../../js/xhr.js'></script>
+	<!-- jQuery -->
+	<script src="../../js/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../../js/bootstrap.min.js"></script>
+	{{{page.script}}}
+</body>
+
+</html>

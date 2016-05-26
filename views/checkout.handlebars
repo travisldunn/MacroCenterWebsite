@@ -1,0 +1,101 @@
+<title>{{page.title}}</title>
+<h1>{{page.header}}</h1>
+{{!-- <h1>{{page.products[0].products.name}}</h1> --}}
+
+
+
+
+    <div class="card card-block">
+    {{#each page.products}}
+    
+     
+
+      <div class = "row">
+     <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-6">
+               {{products.name}}
+            </div>
+      
+          <div class="col-md-3">
+               Price:  ${{products.price}}
+         </div>
+        
+        <div class="col-md-3">
+
+                Quantity:{{products.items.[0].quantity}} 
+        </div>
+       </div>
+ 
+       </div>
+
+{{!-- </div> --}}
+     {{/each}}
+    </div>
+<div class="card card-block">
+<h3 class="card-title">Address</h3>
+
+  <form>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="createUserName" placeholder="Name">
+          </div>
+        </div>
+         <div class="form-group row">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="createUserAddress" placeholder="Address">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="createUserUsername" placeholder="City">
+          </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" id="createUserUsername" placeholder="State">
+          </div>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="createUserPassword" placeholder="Zipcode">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-5">
+            <input type="text" class="form-control" id="createUserUsername" placeholder="Country">
+          </div>
+        <div class="col-sm-4">
+            <input type="Email" class="form-control" id="createUserUsername" placeholder="Email">
+          </div>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="createUserPassword" placeholder="Phone Number">
+          </div>
+        </div>
+       
+      </form>
+
+      </div>
+<div class ="row">
+<div class="col-md-6">
+    <div class="card card-block">
+      <h3 class="card-title">Payment</h3>
+      <p class="card-text">Choode method of payment </p>
+      <input type="text" class="form-control" id="createUserPassword" placeholder="Credit Card Number">
+    </div>
+  </div>
+  
+
+
+<div class = "col-md-6">
+  
+    <div class="card card-block">
+        <div class="col-md-6">
+              <h3>Total Price :$ {{page.total}}</h3>
+        
+              <a class="btn btn-warning" href="email/sendemail" type="submit">Checkout</a>
+        </div>
+    </div>
+  </div>
+
+
+</div>
+ 
+
+{{{page.script}}}
+</div>

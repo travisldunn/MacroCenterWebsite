@@ -1,0 +1,45 @@
+<title>{{page.title}}</title>
+<h1>{{page.header}}</h1>
+<div class="text-right">
+  <select id="sortByField" name="">
+    <option value="Name">Name</option>
+    <option value="Price">Price</option>
+  </select>
+  <select id="orderBy" name="">
+    <option value="Asc">Ascending</option>
+    <option value="Dsc">Descending</option>
+  </select>
+  <button type="button" id="changeOrder" value="{{{page.product}}}" name="button">Change Order</button>
+</div>
+
+<div>
+
+  <div class="productCon" id="product">
+  </div>
+  <div id="productsDisplay" class="row">
+    {{#each page.product}}
+      <div class="productCard">
+        <div class="card card-block">
+          <h3 id="cardName{{name}}" class="card-title">{{name}}</h3>
+          <p id="cardDescription" class="card-text"> Discription: {{description}}</p>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="card-text">
+                <h3 id="cardPrice{{name}}">${{price}} </h3>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="/products/{{{id}}}" id="goToProduct{{name}}" class="btn btn-success"> Go to product</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+
+  <!-- <button id="addToCart" type="button" value="{{page.product.id}}" class="btn btn-primary">Add to Cart</button> -->
+  {{{page.script}}}
+</div>

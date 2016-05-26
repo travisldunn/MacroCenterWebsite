@@ -1,0 +1,73 @@
+<title>{{page.title}}</title>
+<style>
+  table, td, th
+  {
+    border: 1px solid black;
+    text-align: center;
+    padding: 3px;
+  }
+</style>
+<h1>{{page.header}}</h1><hr>
+<div>
+
+<div id="about">
+</div>
+
+
+
+{{!-- {{page.cart[1]}} --}}
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6">
+  {{#each page.myCart}}
+
+
+  
+    <div class="card card-block">
+      <h3 class="card-title">{{name}}</h3>
+     
+      <p class="card-text"> Discription: {{description}}</p>
+      <div class = "row">
+     <div class="col-md-6">
+       <p class="card-text"> <h3>Price: $ {{price}} </h3></p>
+       </div>
+  <div class="col-md-6">
+       <p class="card-text"> <h3>Quantity {{quantity}} </h3></p>
+       </div>
+       </div>
+
+       <div class = "row">
+     <div class="col-md-6">
+         <a href="cart/deleteFromCart/{{items.[0].id}}" class="btn btn-danger"> Delete from  Cart</a>{{items.[0].id}}
+       </div>
+  <div class="col-md-6">
+         <a href="#" class="btn btn-success">Update  Cart</a>
+       </div>
+       </div>
+
+    
+    </div>
+
+  
+  
+
+ 
+  {{/each}}
+  </div>
+  <div class ="row">
+  <div class="col-md-3 col-md-offset-6">
+  <h3>Subtotal: $ {{page.subtotal}} </h3>
+  </div>
+  <div class="col-md-3 col-md-offset-6">
+  <a class="btn btn-warning" href="/shoppingcart/checkout" type="submit">Proceed to checkout</button> </a>
+        {{!--  <a class="btn btn-warning" href="#" role="button" >Proceed to checkout</button> --}}
+
+  </div>
+
+  </div>
+</div>
+  </div>
+
+{{{page.script}}}
+</div>
